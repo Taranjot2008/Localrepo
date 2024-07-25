@@ -1,15 +1,9 @@
 from PIL import Image #type: ignore
 import requests # type: ignore
 import streamlit as st # type: ignore
-from streamlit_lottie import st_lottie #type: ignore
 
 st.set_page_config(page_title='My Webpage',page_icon=':tada:',layout='wide')
 
-def load_lottieurl(url):
-    r= requests.get(url)
-    if r.status_code != 200:
-        return None
-    return r.json()
 
 
 #use local css 
@@ -26,7 +20,6 @@ with st.container():
     st.write('[About me>](https://www.youtube.com/watch?v=-3d1PB3SU3c)')
 
 #---Loading Assets--
-lottie_coding=load_lottieurl('https://lottie.host/e8004bfa-a698-4049-ab64-12e759568e1a/YWITA3L5iY.json')
 img_contact_form=Image.open('images/lotus-evija-top-gear-test-2.jpg')
 
 #content Section 
@@ -42,8 +35,6 @@ with st.container():
                 fluid dynamics and quantum gravity and many more.
                 """)
         st.write('[My papers>](https://www.youtube.com/watch?v=-3d1PB3SU3c)')
-    with right_column:
-        st.lottie(lottie_coding , height='100', key='coding')
 
 #putting images and text along with it
 with st.container():
