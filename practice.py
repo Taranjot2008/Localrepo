@@ -1,7 +1,14 @@
+<<<<<<< HEAD
 from PIL import Image #type: ignore
 import requests # type: ignore
 import streamlit as st # type: ignore
 from streamlit_lottie import st_lottie #type: ignore
+=======
+from PIL import Image
+import requests
+import streamlit as st
+from streamlit_lottie import st_lottie
+>>>>>>> ee6530670af54fb26e2ec568363e63e95cfb90c2
 
 st.set_page_config(page_title='My Webpage',page_icon=':tada:',layout='wide')
 
