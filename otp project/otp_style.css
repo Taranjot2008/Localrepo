@@ -46,13 +46,16 @@ body{
     width: 40%;
     background-color: white;
     border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 #animation1{
     display: flex;
     justify-self: center;
     align-self: center;
-    margin-top: 20px;
 }
 
 #heading1{
@@ -97,10 +100,6 @@ body{
     margin-top: 30px;
     border: none;
     border-radius: 5px;
-    display: flex;
-    justify-self: center;
-    align-items: center;
-    padding-left: 100px;
     transition: background-color 0.4s ease;
 }
 
