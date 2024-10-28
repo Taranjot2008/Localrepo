@@ -13,6 +13,10 @@ window.onload = function() {
         window.alert(`Your OTP is ${rand_otp}`);
     }
 
+    else if (performance.navigation.type === performance.navigation.TYPE_RELOAD){
+        window.location.href = 'otp_page1.html';
+    };
+
 };
 
 
@@ -34,7 +38,7 @@ verify_btn.onclick = function() {
     }
 
     else{
-        alert("Sorry, OTP don't match!!");
+        alert("Sorry, OTP not verified 😡!!");
     }
 };
 
