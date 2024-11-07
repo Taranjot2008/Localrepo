@@ -21,8 +21,7 @@ window.onload = function() {
 
 
 
-verify_btn.onclick = function() {
-
+verify_btn.addEventListener('click', async() => {
     let inputs = document.querySelectorAll(`.boxes .box`);
     let combined_string = '';
 
@@ -40,5 +39,25 @@ verify_btn.onclick = function() {
     else{
         alert("Sorry, OTP not verified 😡!!");
     }
-};
 
+    
+    const response = fetch('/submit', {
+    method: 'POST',
+    headers: {'Content-Type':'application/json'},
+    body: JSON.stringify({otp_string})
+    })
+    
+
+    .then((response) => {
+        if(response.ok){
+            alert('Data sent successfully');
+        }
+        else{
+            alert('Error sending data');
+        }
+    })
+    
+    .catch((error) => alert(`Request failed ${error.message}`))
+
+
+});
